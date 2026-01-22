@@ -1,0 +1,39 @@
+
+#include <stdio.h>
+
+struct Customer {
+    float principal;
+    float rate;
+    float time;
+};
+
+int main() {
+    struct Customer c;
+    float *p, *r, *t, si;
+
+    p = &c.principal;
+    r = &c.rate;
+    t = &c.time;
+
+    printf("Enter Principal amount: ");
+    scanf("%f", p);
+
+    printf("Enter Rate of Interest: ");
+    scanf("%f", r);
+
+    printf("Enter Time (in years): ");
+    scanf("%f", t);
+
+    si = (*p * *r * *t) / 100;
+
+    printf("Simple Interest = %.2f\n", si);
+
+    return 0;
+}
+
+output:
+
+Enter Principal amount: 23
+Enter Rate of Interest: 47
+Enter Time (in years): 2007
+Simple Interest = 21695.67
